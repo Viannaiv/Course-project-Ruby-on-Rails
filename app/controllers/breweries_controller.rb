@@ -5,6 +5,7 @@ class BreweriesController < ApplicationController
   # GET /breweries.json
   def index
     @breweries = Brewery.all
+    # todo: delete unnecessary breweries/panimot.html.erb (created for week 1 ex. 11)
   end
 
   # GET /breweries/1
