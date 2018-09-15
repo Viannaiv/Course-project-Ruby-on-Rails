@@ -8,7 +8,7 @@ class Brewery < ApplicationRecord
         puts "number of beers #{beers.count}"
     end
 
-    # another test method for week 2
+    # another test method for week 2: delete later
     def restart
         self.year = 2018
         puts "changed year to #{year}"
