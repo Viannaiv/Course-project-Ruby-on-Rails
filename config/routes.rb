@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   root "breweries#index"
 
-  resources :ratings, only: [:index, :new, :create]
+  resources :ratings, only: [:index, :new, :create, :destroy]
 end
