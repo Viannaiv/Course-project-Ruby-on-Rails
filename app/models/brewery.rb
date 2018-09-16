@@ -1,5 +1,5 @@
 class Brewery < ApplicationRecord
-    has_many :beers
+    has_many :beers, dependent: :destroy
 
     # a test method from the material of week 2: probably to be deleted later
     def print_report
