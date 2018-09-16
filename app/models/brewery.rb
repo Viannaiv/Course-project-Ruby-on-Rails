@@ -1,5 +1,6 @@
 class Brewery < ApplicationRecord
     has_many :beers, dependent: :destroy
+    has_many :ratings, through: :beers
 
     # a test method from the material of week 2: probably to be deleted later
     def print_report
@@ -12,5 +13,9 @@ class Brewery < ApplicationRecord
     def restart
         self.year = 2018
         puts "changed year to #{year}"
+    end
+
+    def average_rating
+        return self.ratings.average(:score).to_s
     end
 end
